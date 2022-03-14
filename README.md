@@ -1,1 +1,1 @@
-# Project-1---Cin-ma-MAJE
+# Project-1---Cinema-MAJE
