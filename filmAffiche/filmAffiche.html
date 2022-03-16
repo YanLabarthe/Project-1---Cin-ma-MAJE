@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cinéMAJE</title>
-    <link rel="stylesheet" href="\filmAffiche\css\styleMobile.css" />
-    <link rel="stylesheet" href="css/styleDesktop.css" />
+    <link rel="stylesheet" href="\filmAffiche\styleMobile.css" />
+    <link rel="stylesheet" href="\filmAffiche\styleDesktop.css" />
 </head>
 
 <body>
@@ -25,10 +25,13 @@
     <main>
         <h1>Films à l'affiche</h1>
         <section id="filmPresentation">
-            <img src="\images\rockyHorrorPictureShow.jpg" alt="affiche film1" />
-            <div id="mainInfoWrap">
+            <button class="dropDownButton">
+                <img src="\images\rockyHorrorPictureShow.jpg" alt="affiche film1" id="imageAffiche" />
                 <h2 class="movieTitle">The Rocky Horror Picture Show</h2>
-                <p id="infoType">Note: <span id="text"> Si tu l'as pas vu va le voir, ça déchire. </span></p>
+            </button>
+            <div class="dropDownContent">
+            <div id="mainInfoWrap">
+                <p id="infoType">Note: <span id="text"> Must Watch </span></p>
                 <p id="infoType"><span id="text">Avertissement: (-12) Interdit aux moins de 12 ans.</span></p>
             </div>
             <button id="theaterInfoButton">
@@ -49,16 +52,21 @@
                 <p id="infoType">Date de sortie: <span id="text">1973</span></p>
                 <p id="infoType">Catégorie: <span id="text">Comédie, Film musical</span></p>
                 <p id="infoType">Réalisateur: <span id="text">Lou Adler, Michael White</span></p>
-                <p id="infoType">Acteurs principaux: <span id="text">Tim Curry, Susan Sarandon, Barry Bostwick</span></p>
+                <p id="infoType">Acteurs principaux: <span id="text">Tim Curry, Susan Sarandon, Barry Bostwick</span>
+                </p>
                 <p id="infoType">Synopsis:</p>
-                <p><span id="text">Une nuit d'orage, la voiture de Janet (Susan Sarandon) et Brad (Barry Bostwick), un couple coincé qui
-                    vient de se fiancer, tombe en panne. Obligés de se réfugier dans un mystérieux château, ils vont
-                    faire la rencontre de ses occupants pour le moins bizarres, qui se livrent à de bien étranges
-                    expériences.</span></p>
+                <p><span id="text" class="textSynopsis">Une nuit d'orage, la voiture de Janet (Susan Sarandon) et Brad
+                        (Barry Bostwick), un couple coincé qui
+                        vient de se fiancer, tombe en panne. Obligés de se réfugier dans un mystérieux château, ils vont
+                        faire la rencontre de ses occupants pour le moins bizarres, qui se livrent à de bien étranges
+                        expériences.</span></p>
             </div>
+        </div>
         </section>
     </main>
     <footer></footer>
+    <script src="\filmAffiche\index.js"></script>
 </body>
+
 
 </html>
