@@ -1,0 +1,39 @@
+
+@media screen and (min-width: 360px){
+
+body{
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+img{
+    width: 100%;
+}
+
+#film{
+    display:flex;
+    align-content: flex-start;
+}
+
+#filmDescription{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.dropDownButton{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+    max-width: 25rem;
+    border: none;
+    background-color: inherit;
+}
+
+.dropDownContent{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+}
