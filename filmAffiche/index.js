@@ -1,7 +1,19 @@
-const dropDownButton = document.querySelector(".dropDownButton");
-const dropDownContent = document.querySelector(".dropDownContent");
+const dropDownButtons = document.getElementsByClassName("dropDownButton");
+const dropDownButtonsArr = Array.prototype.slice.call( dropDownButtons )
 
-dropDownButton.addEventListener("click", function () {
-    // On click we toggle the class visible on the dropdown
-    dropDownContent.classList.toggle("visible");
-  });
+dropDownButtonsArr.forEach(dropDownButton => {
+  dropDownButton.addEventListener("click", function () {
+    this.nextElementSibling.querySelector(".dropDownContent").classList.toggle("visible");
+  })
+});
+
+/*     
+Possible style animation du expend and collapse 
+var content = this.nextElementSibling;
+if (content.style.maxHeight){
+  content.style.maxHeight = null;
+} else {
+  content.style.maxHeight = content.scrollHeight + "px";
+}
+console.log(content)
+}); */
