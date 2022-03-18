@@ -5,112 +5,138 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cinéMAJE</title>
-    <link rel="stylesheet" href="css/styleMobile.css" />
-    <link rel="stylesheet" href="css/styleDesktop.css" />
+    <link rel="stylesheet" href="./css/styleMobile.css" />
+    <link rel="stylesheet" href="./css/styleDesktop.css" />
   </head>
   <body>
+    <div class="menu-backdrop"></div>
     <header>
-      <a href="#nouveaute"><img id="logo" src="#" alt="logo" /></a>
-      <nav>
+      <a href="#nouveaute"
+        ><img id="logo" src="images/logo.png" alt="logo"
+      /></a>
+      <nav class="d-none">
         <ul id="navBarUl">
-          <li id="navBarLi"><a href="#filmAffiche">Films à l'affiche</a></li>
+          <li id="navBarLi"><a href="#filmAffiche">Films</a></li>
           <li id="navBarLi"><a href="#tarifs">tarifs & Abonnements</a></li>
           <li id="navBarLi"><a href="#infos">Infos pratiques</a></li>
           <li id="navBarLi"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <svg id="hamburger" viewBox="0 0 130 70" width="40" height="40">
+        <rect width="80" height="10" rx="8"></rect>
+        <rect y="25" width="80" height="10" rx="8"></rect>
+        <rect y="50" width="80" height="10" rx="8"></rect>
+      </svg>
     </header>
     <main>
       <section id="nouveaute">
-        <div class="carousel">
-          <button class="carousel_button_left is-hidden">&lt;</button>
-          <div class="carousel_track-container">
-            <ul class="carousel_track">
-              <li class="carousel_slide currentSlide">
-                <img src="images/clandestin1.jpg" alt="" />
-                <p class="text">
-                  Clandestin, le chat métastasé à la tumeur incongrue d'origine
-                  inconnue.
-                </p>
-              </li>
-              <li class="carousel_slide">
-                <img src="images/house-of-the-dead1.jpg" alt="" />
-                <p class="text">
-                  House of the dead, des morts sur l'île de la mort qui ne
-                  veulent décidément pas mourir.
-                </p>
-              </li>
-              <li class="carousel_slide">
-                <img src="images/turkishSW1.jpg" alt="" />
-                <p class="text">
-                  Turkish Star Wars, la Guerre des étoiles au délicieux goût de
-                  dürüm.
-                </p>
-              </li>
-            </ul>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+          <div class="calque-slideshow">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="images/clandestin1.jpg" style="width: 100%" />
+              <div class="text">Clandestin</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="images/house-of-the-dead1.jpg" style="width: 100%" />
+              <div class="text">House of the dead</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="images/turkishSW1.jpg" style="width: 100%" />
+              <div class="text">Turkish Star Wars</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
           </div>
-          <button class="carousel_button_right">&gt;</button>
-          <div class="carousel_nav">
-            <button class="carousel_indicator current-slide"></button>
-            <button class="carousel_indicator"></button>
-            <button class="carousel_indicator"></button>
-          </div>
+        </div>
+
+        <!-- The dots/circles -->
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
         </div>
       </section>
 
       <!-- ----------------- section film à l'affiche ---------------- -->
       <section id="filmAffiche">
+        <h2>Les films à l'affiche</h2>
         <div>
-          <a href="">
-            <img src="" alt="affiche film1" />
-            <p>Lorem, ipsum.</p>
-          </a>
+          <div class="divFilm">
+            <img src="images/Carnosaur.png" alt="affiche film1" />
+            <p>Carnosaur</p>
+            <span class="myButton">Plus d'info</span>
+          </div>
+
+          <div class="divFilm">
+            <img src="images/Kung_Pow_Enter_the_Fist.png" alt="affiche film2" />
+            <p>
+              Kung Pow <br />
+              Enter the Fist
+            </p>
+            <span class="myButton">Plus d'info</span>
+          </div>
+
+          <div class="divFilm">
+            <img src="images/18954788.jpg" alt="affiche film3" />
+            <p>
+              Don't miss with <br />
+              the Zohan
+            </p>
+            <span class="myButton">Plus d'info</span>
+          </div>
         </div>
-        <div>
-          <a href="">
-            <img src="" alt="affiche film2" />
-            <p>Lorem, ipsum.</p>
-          </a>
+        <div id="tousLesFilms">
+          <p>Voir tous les films à l'affiche</p>
+          <button><a href="#">CLIQUE ICI</a></button>
         </div>
-        <div>
-          <a href="">
-            <img src="" alt="affiche film3" />
-            <p>Lorem, ipsum.</p>
-          </a>
-        </div>
-        <div>
-          <a href="">
-            <img src="" alt="" />
-            <p>Lorem, ipsum.</p>
-          </a>
-        </div>
-        <a href=""><p>Voir tous les films à l'affiche</p></a>
       </section>
+
+      <!-- ------------------------------- Abonnements --------------------- -->
       <section id="tarifs">
-        <img id="carte" src="" alt="carte" />
-        <a href=""><p>Voir tous les tarifs et les abonnments disponibles</p></a>
+        <div id="carteAbo1"><p>CINÉMAJE</p></div>
+        <div id="carteAbo2"><p>CINÉMAJE</p></div>
+        <div id="carteAbo3"><p>CINÉMAJE</p></div>
+        <div id="tousLesAbos">
+          <p>FAITES-VOUS PLAISIR AVEC LA CARTE UGC !</p>
+          <p>
+            Devenez membre du Club UGC et profitez de 5 places à partir de 34€.
+          </p>
+          <div id="buttonAbo">
+            <button>
+              <a href="#">Plus d'infos sur les tarifs et les abonnements</a>
+            </button>
+          </div>
+        </div>
       </section>
       <!-- ------------------------------- Infos Pratiques --------------------- -->
       <section id="infos">
         <h2>Infos Pratiques</h2>
         <div>
           <div>
-            <!-- google map -->
+            <h3>Adresse</h3>
+            <p>CinéMAJE</p>
+            <p>17 Rue de la Liberté</p>
+            <p>33200 Bordeaux</p>
+            <h3>Horaires d'ouverture du cinéMAJ</h3>
+            <p>Du lundi au vendredi : 08h30-12h30 & 14h00-17h00</p>
+            <p>Le week-end sur demande du président uniquement</p>
+          </div>
+          <div id="iframe">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.1004581883267!2d-0.6030189844845336!3d44.83988747909855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5527f81b1731a1%3A0xd3ed05754af58f93!2s17%20Rue%20de%20la%20Libert%C3%A9%2C%2033200%20Bordeaux!5e0!3m2!1sfr!2sfr!4v1647264472336!5m2!1sfr!2sfr"
               style="border: 0"
               allowfullscreen=""
               loading="lazy"
             ></iframe>
-          </div>
-          <div>
-            <h3>Adresse</h3>
-            <p>CinémAJE</p>
-            <p>17 Rue de la Liberté</p>
-            <p>33200 Bordeaux</p>
-            <h3>Horaires d'ouverture du cinéMAJ</h3>
-            <p>Du lundi au vendredi : 08h30-12h30 & 14h00-17h00</p>
-            <p>Le week-end sur demande du président uniquement</p>
           </div>
         </div>
       </section>
@@ -120,9 +146,14 @@
         <form id="contactForm">
           <div class="div1">
             <label for="name">Nom :</label>
-            <input type="text" id="name" name="user_name" />
+            <input type="text" id="name" name="user_name" required="required" />
             <label for="email">e-mail:</label>
-            <input type="email" id="email" name="user_email" />
+            <input
+              type="email"
+              id="email"
+              name="user_email"
+              required="required"
+            />
           </div>
           <div class="div2">
             <label for="message">Votre message:</label>
@@ -135,7 +166,7 @@
             ></textarea>
           </div>
           <div class="div3">
-            <button type="submit">Envoyer le message</button>
+            <button type="submit"><a href="#">Envoyer le message</a></button>
           </div>
         </form>
       </section>
@@ -145,82 +176,62 @@
     <!-- ----------------------------------- Javascript ------------------------------------------ -->
 
     <script>
-      const track = document.querySelector(".carousel_track");
-      const slides = Array.from(track.children);
-      const nextButton = document.querySelector(".carousel_button_right");
-      const prevButton = document.querySelector(".carousel_button_left");
-      const dotsNav = document.querySelector(".carousel_nav");
-      const dots = Array.from(dotsNav.children);
-      const slideSize = slides[0].getBoundingClientRect();
-      const slideWidth = slideSize.width;
+      // window.onresize = function() {
+      //   const screenWidth = window.innerWidth;
+      // }
 
-      const setSlidePosition = (slide, index) => {
-        slide.style.left = slideWidth * index + "px";
-      };
+      // if (screenWidth >= 360){
+      //   document.querySelector('nav').classList.remove('d-none');
+      // }
 
-      slides.forEach(setSlidePosition);
+      // ------------------------------- Carousel ---------------------
+      var slideIndex = 1;
+      showSlides(slideIndex);
 
-      const moveToSlide = (track, currentSlide, targetSlide) => {
-        track.style.transform = "translateX(-" + targetSlide.style.left + ")";
-        currentSlide.classList.remove("currentSlide");
-        targetSlide.classList.add("currentSlide");
-      };
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
 
-      const updateDots = (currentDot, targetDot) => {
-        currentDot.classList.remove("current-slide");
-        targetDot.classList.add("current-slide");
-      };
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
 
-      const hideShowButtons = (slides, nextButton, prevButton, targetIndex) => {
-        if (targetIndex === 0) {
-          prevButton.classList.add("is-hidden");
-          nextButton.classList.remove("is-hidden");
-        } else if (targetIndex === slides.length - 1) {
-          prevButton.classList.remove("is-hidden");
-          nextButton.classList.add("is-hidden");
-        } else {
-          prevButton.classList.remove("is-hidden");
-          nextButton.classList.remove("is-hidden");
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
         }
-      };
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+      // --------------------------- Barre de nav -----------------
 
-      prevButton.addEventListener("click", () => {
-        const currentSlide = track.querySelector(".currentSlide");
-        const prevSlide = currentSlide.previousElementSibling;
-        const currentDot = dotsNav.querySelector(".current-slide");
-        const prevDot = currentDot.previousElementSibling;
-        const prevIndex = slides.findIndex((slide) => slide === prevSlide);
+      document
+        .querySelector("#hamburger")
+        .addEventListener("click", function () {
+          document.querySelector("nav").classList.toggle("d-none");
+          document.querySelector(".menu-backdrop").style.display = "block";
+        });
 
-        moveToSlide(track, currentSlide, prevSlide);
-        updateDots(currentDot, prevDot);
-        hideShowButtons(slides, nextButton, prevButton, prevIndex);
-      });
-
-      nextButton.addEventListener("click", () => {
-        const currentSlide = track.querySelector(".currentSlide");
-        const nextSlide = currentSlide.nextElementSibling;
-        const currentDot = dotsNav.querySelector(".current-slide");
-        const nextDot = currentDot.nextElementSibling;
-        const nextIndex = slides.findIndex((slide) => slide === nextSlide);
-
-        moveToSlide(track, currentSlide, nextSlide);
-        updateDots(currentDot, nextDot);
-        hideShowButtons(slides, nextButton, prevButton, nextIndex);
-      });
-
-      dotsNav.addEventListener("click", (event) => {
-        const targetDot = event.target.closest("button");
-        if (!targetDot) return;
-
-        const currentSlide = track.querySelector(".currentSlide");
-        const currentDot = dotsNav.querySelector(".current-slide");
-        const targetIndex = dots.findIndex((dot) => dot === targetDot);
-        const targetSlide = slides[targetIndex];
-
-        moveToSlide(track, currentSlide, targetSlide);
-        updateDots(currentDot, targetDot);
-        hideShowButtons(slides, nextButton, prevButton, targetIndex);
-      });
+      document
+        .querySelector(".menu-backdrop")
+        .addEventListener("click", function () {
+          document.querySelector("nav").classList.add("d-none");
+          document.querySelector(".menu-backdrop").style.display = "none";
+        });
     </script>
   </body>
 </html>

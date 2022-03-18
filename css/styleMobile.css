@@ -1,126 +1,391 @@
 @font-face {
-  font-family: "Iorek Byrnison";
-  src: url(../police/Iorek\ Byrnison.ttf);
+  font-family: "Landa";
+  src: url(../police/Landa.ttf)
 }
-
 
 body {
   box-sizing: border-box;
-}
-
-.carousel {
-  height: 200px;
-  max-width: 70%;
-  margin: 0 auto;
-  position: relative; /*On met le container principal en position relative pour ensuite positionner nos images en absolute sans que tout ne remonte en haut du body */
-}
-
-.carousel img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.carousel_track-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.carousel_track {
-  padding: 0;
   margin: 0;
-  list-style: none;
-  position: relative;
-  height: 100%;
-  transition: transform 250ms ease-in;
+  background-color: rgb(24, 26, 27);
+  font-family: 'Landa';
+  font-size: 27px;
 }
 
-.carousel_slide {
-  position: absolute; /*Cette position permet de placer toutes les images les unes sur les autres */
-  top: 0;
-  bottom: 0;
-  width: 100%;
+.d-none {
+  display: none;
 }
 
-.carousel_button_left {
-  position: absolute;
-  left: -50px;
-  top: 50%;
-  transform: translateY(
-    -50%
-  ); /*Sans cette ligne le haut du bouton est positionné à 50%, pas le milieu du bouton */
-  background: transparent;
-  border: none;
-  font-size: 2em;
-  cursor: pointer; /*Permet de transformer la souris en main quand on passe sur le bouton; */
+a {
+  text-decoration: none;
+  font-family: 'Landa';
+  font-size: 25px;
 }
 
-.carousel_button_right {
-  position: absolute;
-  right: -50px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  font-size: 2em;
-  cursor: pointer; /*Permet de transformer la souris en main quand on passe sur le bouton; */
+a :visited {
+  text-decoration: none;
 }
 
-.carousel_nav {
-  display: flex;
-  justify-content: center;
-}
-
-.carousel_indicator {
-  border-radius: 50%;
-  width: 5px;
-  height: 5px;
-  background-color: black;
-  border: 0;
-  padding: 6px;
-  margin: 5px 10px;
-  opacity: 0.3;
+button {
   cursor: pointer;
 }
 
-.current-slide {
-  background-color: black;
-  opacity: 1;
+
+#hamburger {
+  cursor: pointer;
+  fill: burlywood;
 }
 
+h2 {
+  margin-top: 0;
+  font-weight: normal;
+  text-transform: uppercase;
+  border-bottom: rgb(212, 208, 202) 1px solid;
+  text-decoration: underline rgb(212, 208, 202) solid 8px ;
+
+}
+
+h3{
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  text-decoration: underline;
+}
+
+/* --------------------------- Barre de Nav --------------- */
+.menu-backdrop {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  transform: translateY(160px);
+  width: 100vw;
+  opacity: 0;
+  z-index: 2;
+}
+
+#logo {
+  height: 80px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; 
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px burlywood;
+  background-color:rgb(30, 33, 34);
+  z-index: 1;
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.8);
+}
+
+nav {
+  top: 80px;
+  right: 0;
+  left: 0;
+  position: fixed;
+  z-index: 2;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0;
+  padding: 0;
+  text-align: end;
+}
+
+li {
+  list-style: none;
+  text-transform: uppercase;
+}
+
+nav ul li a {
+  display: block;
+  background-color: white;
+  border-bottom: solid #deb887 0.25px;
+  padding: 5px;
+  color: rgb(212, 208, 202);
+}
+
+nav ul li a:hover {
+  background-color: rgb(212, 208, 202);
+  text-decoration: underline rgb(51, 162, 255);
+  color: rgb(51, 162, 255);
+}
+
+/* ------------------------- Carousel ------------------------ */
+#nouveaute {
+  /* background-color: aqua; */
+  margin-top: 80px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
 .text {
-  color: whitesmoke;
-  font-size: 15px;
-  padding: 0px 12px;
+  color: #f2f2f2;
+  font-size: 20px;
+  padding: 8px 0;
   position: absolute;
   bottom: 8px;
-  left: 2px;
-  right: 2px;
   width: 100%;
   text-align: center;
 }
 
-.is-hidden {
-  display: none;
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* ---------------------------- Films à l'affiche --------------------------- */
+
+#filmAffiche {
+  /* background-color: violet; */
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+#filmAffiche h2 {
+  font-family: 'Landa';
+  font-weight: normal;
+  width: 80%;
+  margin: auto;
+}
+
+#filmAffiche p {
+  text-transform: uppercase;
+  color: rgb(212, 208, 202);
+  margin: 10px;
+  text-align: center;
+}
+
+.divFilm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  max-width: 200px;
+  margin: 20px auto;
+  border: 1px solid burlywood;
+  border-top: none;
+  border-radius: 10px;
+}
+
+#filmAffiche img {
+  height: 250px;
+  border-radius: 10px;
+}
+
+.myButton {
+  box-shadow: 3px 4px 0px 0px #9fb4f2;
+  background: linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+  background-color: #7892c2;
+  border-radius: 15px;
+  border: 1px solid #4e6096;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 7px 25px;
+  text-decoration: none;
+  margin: 0 0 10px;
+}
+.myButton:hover {
+  background: linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+  background-color: #476e9e;
+}
+
+#tousLesFilms {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#tousLesFilms button {
+  border: none;
+  background-color: rgb(164, 3, 14);
+  width: 60%;
+  height: 40px;
+  margin: 10px;
+}
+
+#tousLesFilms button a {
+  color: white;
+}
+
+#tousLesFilms button:hover{
+box-shadow: 0 5px 5px 0 grey;
+background-color: rgb(51, 162, 255);
+}
+/* ---------------------------- Abonnements --------------------------- */
+#tarifs {
+  /* background-color: brown; */
+  min-height: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0 0;
+  background-color: #303030;
+  width: 95%;
+  margin: auto;
+}
+
+#carteAbo2, #carteAbo1, #carteAbo3 {
+  display: flex;
+  width: 200px;
+  height: 125px;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-20deg);
+  border-radius: 15px;
+  background-color: rgb(6, 32, 111);
+  box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.5);
+}
+
+#carteAbo1 {
+  background-color: lightcoral;
+  position: relative;
+  left: -50px;
+  top: 70px;
+  transform: rotate(-50deg);
+} 
+
+#carteAbo3 {
+  background-color: burlywood;
+  position: relative;
+  right: 0px;
+  top: -50px;
+  transform: rotate(10deg);
+}
+
+#tousLesAbos {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#tousLesAbos button {
+  border: none;
+  background-color: rgb(164, 3, 14);
+  width: 60%;
+  height: 40px;
+  margin: 10px;
+  width: 80%;
+}
+
+#tousLesAbos button:hover {
+  box-shadow: 0 5px 5px 0 grey;
+  background-color: rgb(51, 162, 255);
+}
+
+#buttonAbo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  }
+
+
+#tousLesAbos a {
+  color: white;
 }
 
 /* ---------------------------- Infos pratiques --------------------------- */
+
+#infos {
+  /* background-color: green; */
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#infos h2{
+  text-align: center;
+}
+
+#iframe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 0;
+}
 
 #infos p {
   margin: 0;
 }
 
-#infos {
-  max-width: 80%;
-  margin: auto;
-}
-
 /* ---------------------------- Formulaire --------------------------- */
 #contact {
   max-width: 80%;
-  margin: auto;
+  margin: 0 auto;
+  /* background-color: red; */
+  padding: 10px;
+}
+
+#contact h2 {
+  text-align: end;
 }
 
 #contactForm {
@@ -135,6 +400,7 @@ body {
 
 #contactForm input {
   margin: 5px 0 10px;
+  width: 90%;
 }
 
 #contactForm textarea {
@@ -144,28 +410,79 @@ body {
 
 #contactForm button {
   margin: 10px 0;
+  border: none;
+  background-color: rgb(164, 3, 14);
+  height: 40px;
 }
 
-@media screen and (min-width: 360px) {
-  
-  #contactForm {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    grid-template-rows: repeat(2, 1fr);
+#contactForm a {
+  color: white;
+}
+
+#contactForm button:hover {
+  box-shadow: 0 5px 5px 0 grey;
+  background-color: rgb(51, 162, 255);
+}
+
+/* ---------------------- MEDIA QUERIES ----------------------- */
+
+@media screen and (min-width: 690px){
+  #hamburger {
+    display: none;
   }
 
-  .div1 {
-    grid-area: 1 / 1 / 2 / 2;
+  .d-none {
+    display: flex;
   }
-  .div2 {
-    grid-area: 1 / 2 / 2 / 3;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  .div3 {
-    grid-area: 2 / 1 / 3 / 3;
+
+  nav {
+    position: static;
   }
-}
+
+  nav ul {
+    display: flex;
+  }
+
+  nav ul li {
+    padding: 10px;
+  }
+
+  nav ul li a {
+    display: inline;
+    border-bottom: none;
+    padding: 5px;
+    color: white;
+  }
+
+  nav ul li a:hover {
+    text-decoration: underline burlywood;
+    color: burlywood;
+    background-color: rgb(30, 33, 34);
+    font-size: 30px;
+  }
+} 
+
 
 @media screen and (min-width: 620px) {
+  #filmAffiche {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #filmAffiche > div {
+    display: flex;
+  }
+
+  .divFilm {
+    margin: 20px;
+  }
+
   iframe {
     width: 340px;
     height: 200px;
@@ -182,5 +499,27 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  #contactForm {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .div1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .div2 {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .div3 {
+    grid-area: 2 / 1 / 3 / 3;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #contactForm button {
+    width: 80%;
   }
 }
