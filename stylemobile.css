@@ -1,0 +1,44 @@
+:root{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:700 ;
+    padding: 8px;
+    margin: 8px;
+}
+
+@media screen and (max-width: 390px){
+    #navBarUl{
+        display: none;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 391px){
+    #navBarUl{
+        display: flex;
+        justify-content: space-between;
+    }
+    #icon2{
+        display: none;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;   
+    }
+    ul {
+        display: inline-block;
+        justify-content: space-around;
+        flex: 1;
+        border: 2px solid blue;
+        color: blue;
+        margin: 8px;
+        padding: 8px;
+        padding-left: 1rem;
+    }  
+}  
+
+
+
