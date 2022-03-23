@@ -3,7 +3,10 @@ import { movie } from "./lesFilms.js";
 
 console.table(movie[0]);
 console.log(movie[0].img);
-console.log(createMovie(movie[0]));
+createMovie(movie[0]);
+createMovie(movie[1]);
+createMovie(movie[2]);
+createMovie(movie[3]);
 const dropDownButtons = document.getElementsByClassName("dropDownButton");
 const dropDownButtonsArr = Array.prototype.slice.call( dropDownButtons )
 
@@ -13,7 +16,7 @@ dropDownButtonsArr.forEach(dropDownButton => {
   })
 });
 
-/*     
+ /*     
 Possible style animation du expend and collapse 
 var content = this.nextElementSibling;
 if (content.style.maxHeight){

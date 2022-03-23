@@ -5,13 +5,13 @@
 
 // export const createMovie = (image, titre, note, avertissement, butstart, butend, butvo, date, cat2, realisateur, acteur, synopsis) => {
     export const getMovieMarkup = (movie) => `
- <hr>
- <section id="film">
+<hr>
+    <section id="film">
      <button class="dropDownButton">
          <img src="${movie.img}" alt="affiche film1" id="imageAffiche" />
      </button>
      <div id="filmDescription">
-         <h2 class="movieTitle">${movie.name}}</h2>
+         <h2 class="movieTitle">${movie.name}</h2>
          <div class="dropDownContent">
              <div id="mainInfoWrap">
                  <div id="infoPartOne">
@@ -39,9 +39,9 @@
              <div id="infoPartThree"></div>
              <div id="movieInfoWrap">
                  <p id="infoType">Date de sortie <span id="text">${movie.date}</span></p>
-                 <p id="infoType">Catégorie <span id="text">${movie.cat} ${movie.cat}</span></p>
-                 <p id="infoType">Réalisateur <span id="text">${movie.rea}</span></p>
-                 <p id="infoType">Acteurs principaux <span id="text">${movie.act}</span>
+                 <p id="infoType">Catégorie <span id="text">${movie.cat.join(', ')}</span></p>
+                 <p id="infoType">Réalisateur <span id="text">${movie.rea.join(', ')}</span></p>
+                 <p id="infoType">Acteurs principaux <span id="text">${movie.act.join(', ')}</span>
                  </p>
                  <p id="infoType">Synopsis:</p>
                  <p><span id="text" id="textSynopsis">${movie.synop}
@@ -49,10 +49,8 @@
              </div>
          </div>
      </div>
-     </div>
- </section>
- <hr>`;
+     </div>`;
 
  export const createMovie = (movie) => {
-     document.querySelector("#film").innerHTML += getMovieMarkup(movie);
+     document.querySelector("main").innerHTML += getMovieMarkup(movie);
  }
