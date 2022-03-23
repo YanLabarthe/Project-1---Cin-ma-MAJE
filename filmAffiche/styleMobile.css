@@ -1,0 +1,31 @@
+@media screen and (max-width: 360px){
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        background-color: #131516;
+        color: #C4D0D7;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    .textSynopsis{
+        display:block;
+        text-align: justify;
+        text-align-last: center;
+    }
+
+    .dropDownContent{
+        display:none;
+    }
+
+    .visible{
+        display:inherit;
+    }
+
+
+}
