@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cinéMAJE</title>
+    <link rel="stylesheet" href="./css/styleMobile.css" />
+    <link rel="stylesheet" href="./css/styleDesktop.css" />
+  </head>
+  <body>
+    <div class="menu-backdrop"></div>
+    <header>
+      <a href="#nouveaute"
+        ><img id="logo" src="images/logo.png" alt="logo"
+      /></a>
+      <nav class="d-none">
+        <ul id="navBarUl">
+          <li id="navBarLi"><a href="#filmAffiche">Films</a></li>
+          <li id="navBarLi"><a href="#tarifs">tarifs & Abonnements</a></li>
+          <li id="navBarLi"><a href="#infos">Infos pratiques</a></li>
+          <li id="navBarLi"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <svg id="hamburger" viewBox="0 0 130 70" width="40" height="40">
+        <rect width="80" height="10" rx="8"></rect>
+        <rect y="25" width="80" height="10" rx="8"></rect>
+        <rect y="50" width="80" height="10" rx="8"></rect>
+      </svg>
+    </header>
+    <div id="fondPopup"></div>
+    <div class="container-popup">
+      <div>
+        <div id="popupBase">
+          <p id="p1">FÉLICITATIONS!</p>
+          <p id="p2">Tu es le millième visiteur !</p>
+          <p id="p3">Pour récupérer tes 100€ cash !</p>
+          <button id="buttonInfoComp">Clique ici</button>
+        </div>
+        <div id="popupComp">
+          <p>
+            Il te suffit simplement de renseigner ton numéro de carte de crédit
+            :
+          </p>
+          <div>
+            <input type="text" required />
+          </div>
+        </div>
+      </div>
+      <span class="croix">✖</span>
+    </div>
+    <main>
+      <!--------------------------- Carousel ------------------------->
+      <section id="nouveaute">
+        <div class="slideshow-container">
+          <div class="calque-slideshow">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="images/clandestin1.jpg" style="width: 100%" />
+              <div class="text">
+                <h4>Clandestin</h4>
+                L'histoire incroybale d'un chat métastasé meutrier
+              </div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="images/house-of-the-dead1.jpg" style="width: 100%" />
+              <div class="text">
+                <h4>House of the dead</h4>
+                Sur l'île de la muerte les morts reviennent à la vie
+              </div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="images/turkishSW1.jpg" style="width: 100%" />
+              <div class="text">
+                <h4>Turkish Star Wars</h4>
+                Un space opéra au délicieux goût de dürüm
+              </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+        </div>
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </section>
+
+      <!-- ----------------- section film à l'affiche ---------------- -->
+      <section id="filmAffiche">
+        <h2>Les films à l'affiche</h2>
+        <div>
+          <div class="divFilm">
+            <img src="images/Carnosaur.png" alt="affiche film1" />
+            <p>Carnosaur</p>
+            <span class="myButton">Plus d'info</span>
+          </div>
+
+          <div class="divFilm">
+            <img src="images/Kung_Pow_Enter_the_Fist.png" alt="affiche film2" />
+            <p>
+              Kung Pow <br />
+              Enter the Fist
+            </p>
+            <span class="myButton">Plus d'info</span>
+          </div>
+
+          <div class="divFilm">
+            <img src="images/18954788.jpg" alt="affiche film3" />
+            <p>
+              Don't miss with <br />
+              the Zohan
+            </p>
+            <span class="myButton">Plus d'info</span>
+          </div>
+
+          <div class="divFilm">
+            <img src="images/cobra.jpg" alt="affiche film4" />
+            <p>Le Cobra</p>
+            <span class="myButton">Plus d'info</span>
+          </div>
+
+          <div class="divFilm">
+            <img src="images/Troll_2.jpg" alt="affiche film5" />
+            <p>Troll 2</p>
+            <span class="myButton">Plus d'info</span>
+          </div>
+        </div>
+        <div id="tousLesFilms">
+          <p>Voir tous les films à l'affiche</p>
+          <a href="#"><button>CLIQUE ICI</button></a>
+        </div>
+      </section>
+
+      <!-- ------------------------------- Abonnements --------------------- -->
+      <section id="tarifs">
+        <div id="carteAbo1"><p>CINÉMAJE</p></div>
+        <div id="carteAbo2"><p>CINÉMAJE</p></div>
+        <div id="carteAbo3"><p>CINÉMAJE</p></div>
+        <div id="tousLesAbos">
+          <p>Faîtes-vous plaisir avec la CARTE CINÉMAJE !</p>
+          <p>
+            Devenez membre du Club CINÉMAJE et profitez de 5 places à partir de
+            seulement 140€.
+          </p>
+          <a href="#"><button>Plus d'infos sur les tarifs ici</button></a>
+        </div>
+      </section>
+      <!-- ------------------------------- Infos Pratiques --------------------- -->
+      <section id="infos">
+        <h2>Infos Pratiques</h2>
+        <div>
+          <div>
+            <h3>Adresse</h3>
+            <p>CinéMAJE</p>
+            <p>17 Rue de la Liberté</p>
+            <p>33200 Bordeaux</p>
+            <h3>Horaires d'ouverture du cinéMAJ</h3>
+            <p>Du lundi au vendredi : 08h30-12h30 & 14h00-17h00</p>
+            <p>Le week-end sur demande du président uniquement</p>
+          </div>
+          <div id="iframe">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.1004581883267!2d-0.6030189844845336!3d44.83988747909855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5527f81b1731a1%3A0xd3ed05754af58f93!2s17%20Rue%20de%20la%20Libert%C3%A9%2C%2033200%20Bordeaux!5e0!3m2!1sfr!2sfr!4v1647264472336!5m2!1sfr!2sfr"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <!-- ------------------------------- Formulaire --------------------- -->
+      <section id="contact">
+        <h2>Nous contacter</h2>
+        <form id="contactForm" action="contactMerci.html">
+          <div class="div1">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="user_name" required="required" />
+            <label for="email">e-mail:</label>
+            <input
+              type="email"
+              id="email"
+              name="user_email"
+              required="required"
+            />
+          </div>
+          <div class="div2">
+            <label for="message">Votre message:</label>
+            <textarea
+              placeholder="Taper ici votre message"
+              name="user_message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <div class="div3">
+            <button type="submit">Envoyer le message</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer></footer>
+
+    <!-- ----------------------------------- Javascript ------------------------------------------ -->
+
+    <script>
+      // ------------------------------- Pop-up ---------------------
+
+      window.addEventListener("load", () => {
+        document.querySelector(".container-popup").style.display = "flex";
+        document.querySelector(".container-popup").style.transition = "0.7s";
+      });
+
+      document.querySelector(".croix").addEventListener("click", () => {
+        document.querySelector(".container-popup").style.display = "none";
+        document.querySelector("#fondPopup").style.display = "none";
+      });
+
+      document
+        .querySelector("#buttonInfoComp")
+        .addEventListener("click", () => {
+          document.querySelector("#popupBase").style.display = "none";
+          document.querySelector("#popupComp").style.display = "block";
+        });
+
+      // ------------------------------- Carousel ---------------------
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+      // --------------------------- Barre de nav -----------------
+
+      document
+        .querySelector("#hamburger")
+        .addEventListener("click", function () {
+          document.querySelector("nav").classList.toggle("d-none");
+          document.querySelector(".menu-backdrop").style.display = "block";
+        });
+
+      document
+        .querySelector(".menu-backdrop")
+        .addEventListener("click", function () {
+          document.querySelector("nav").classList.add("d-none");
+          document.querySelector(".menu-backdrop").style.display = "none";
+        });
+    </script>
+  </body>
+</html>
