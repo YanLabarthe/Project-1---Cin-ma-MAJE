@@ -1,7 +1,8 @@
 export const movie = [
     {
+        id: 1,
         img: "https://fr.web.img6.acsta.net/pictures/14/02/07/10/28/140617.jpg",
-        name: "Zombeaver",
+        name: "Zombeavers",
         note: 4,
         avert: 'Avertissement (-12) Interdit aux moins de 12 ans.', 
         button: { butStart: '19:15', butEnd: '(fin: 21h30)', butVo: 'VO' },
@@ -14,6 +15,7 @@ export const movie = [
       horde de... castors zombies !`,
     },
     {
+        id: 2,
         img: "https://media.senscritique.com/media/000007193073/source_big/Carnosaur.jpg",
         name: "Carnosaur",
         note: 4,
@@ -29,6 +31,7 @@ export const movie = [
         massacre sa famille, l'élu entreprend une quête pour venger la mort des siens...`,
     },
     {
+        id: 3,
         img: "https://fr.web.img2.acsta.net/medias/nmedia/18/65/66/53/18954788.jpg",
         name: "Rien que pour vos cheveux",
         note: 3,
@@ -50,6 +53,7 @@ export const movie = [
         qui compte bien en finir avec lui une bonne fois pour toutes...`,
     },
     {
+        id: 4,
         img: "https://media.senscritique.com/media/000000092135/source_big/Kung_Pow_Enter_the_Fist.jpg",
         name: "Kung Pow",
         note: 5,

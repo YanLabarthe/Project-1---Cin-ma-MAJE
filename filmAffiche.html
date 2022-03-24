@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cinéMAJE</title>
+
     <link rel="stylesheet" href="css/styleMobile.css" />
     <link rel="stylesheet" href="css/styleMobile2.css" />
     <link rel="stylesheet" href="css/styleDesktop.css" />
@@ -34,22 +35,26 @@
       <section id="mainFilmAffiche">
     <div class="wrapper">
         <div class="filters">
-          <input type="text" class="search-input" placeholder="🔎 Type to search" />
-        <select class="select" name="searchMovie">
-          <option value="1">1/5</option>
-          <option value="2">2/5</option>
-          <option value="3">3/5</option>
-          <option value="4">4/5</option>
-          <option value="5">5/5</option>
-        </select>
-        <div>
-        <label for="available">Show only Available </label>
-        <input type="checkbox" class="available-checkbox" name="checkbox" id="">
+            <div class="search-wrapper">
+                <laber for="search">Search</laber>
+                <input type="search" id="search" class="search-input" placeholder="🔎 Type to search" />
+            </div>
+
+            <select class="select" name="searchMovie">
+                <option value="1">1/5</option>
+                <option value="2">2/5</option>
+                <option value="3">3/5</option>
+                <option value="4">4/5</option>
+                <option value="5">5/5</option>
+            </select>
+            <div>
+                <label for="available">Show only Available </label>
+                <input type="checkbox" class="available-checkbox" name="checkbox" id="">
+            </div>
         </div>
-        </div>
-    <main>
-        <h1>Films à l'affiche</h1>
-        <!-- <hr>
+        <main>
+            <h1>Films à l'affiche</h1>
+            <!-- <hr>
         <section id="film">
             <button class="dropDownButton">
                 <img src="\images\zombeavers.jpg" alt="affiche film1" id="imageAffiche" />
@@ -254,6 +259,7 @@
             </div>
         </section>
     -->
+
 </section>    
 </main>
     <footer></footer>
