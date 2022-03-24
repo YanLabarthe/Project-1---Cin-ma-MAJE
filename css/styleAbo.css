@@ -1,0 +1,251 @@
+/* --------------------------------------------------Police -----------------------------------------------------------------------------*/
+@font-face {
+  font-family: "Landa";
+  src: url("Landa.ttf");
+}
+
+body {
+  font-family: landa;
+  background-color: rgb(30, 33, 34);
+}
+/* ------------------------------------------------- Cartes & Abonnements --------------------------------------------------------------*/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.parent > div {
+  flex-basis: 350px;
+  text-align: center;
+}
+div.footer-col {
+  text-align: left;
+  flex-basis: 400px;
+}
+
+h1 {
+  font-family: landa;
+  text-align: center;
+  font-size: 50px;
+  color: burlywood;
+  letter-spacing: 5px;
+}
+
+h1.mainTitle {
+  font-family: landa;
+  text-align: center;
+  font-size: 70px;
+  color: burlywood;
+  letter-spacing: 8px;
+  text-transform: capitalize;
+}
+
+h2 {
+  color: whitesmoke;
+  text-decoration: underline burlywood;
+  font-weight: normal;
+  font-size: 35px;
+}
+h2.duo {
+  color: whitesmoke;
+}
+
+h3 {
+  font-size: 30px;
+  color: whitesmoke;
+  letter-spacing: 1.5px;
+}
+h4 {
+  font-size: 24px;
+  color: whitesmoke;
+}
+p {
+  color: whitesmoke;
+}
+img.carteAbo {
+  width: 300px;
+  height: auto;
+  border-radius: 10%;
+  transition: transform 0.1s;
+}
+img.carteAbo:hover {
+  transform: scale(1.2);
+}
+
+p.prix {
+  font-size: 25px;
+  font-weight: bold;
+  color: burlywood;
+  letter-spacing: 1.5px;
+}
+
+table {
+  margin: auto;
+  border: medium solid whitesmoke;
+  width: 50%;
+}
+tbody {
+  font-size: 24px;
+  letter-spacing: 1.5px;
+}
+td {
+  color: #ffffff;
+}
+
+td,
+th {
+  color: #ffffff;
+  text-align: center;
+}
+
+.condition {
+  font-style: italic;
+  font-size: 18px;
+  padding-top: 50px;
+  color: #ffffff;
+}
+.condition2 {
+  font-style: italic;
+  font-size: 18px;
+  padding-top: 50px;
+  padding-left: 345px;
+  color: #ffffff;
+}
+.prix {
+  font-weight: bold;
+  color: whitesmoke;
+}
+.partenaires {
+  flex-direction: column;
+}
+.cine {
+  margin-bottom: 50px;
+}
+
+/* ------------------------------------code bouton je m'abonne ------------------------ */
+
+.myButton {
+  background-color: rgb(51, 162, 255);
+  border-radius: 28px;
+  border: 1px solid rgb(51, 162, 255);
+  display: inline-block;
+  color: #ffffff;
+  font-family: landa;
+  font-size: 26px;
+  font-weight: bold;
+  padding: 10px 11px;
+  text-decoration: none;
+  text-shadow: 0px 0px 0px #2f6627;
+  margin-bottom: 15px;
+}
+.myButton:hover {
+  background-color: #14a961;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+/* ---------------------------------------------------------- Tarifs -------------------------------------------------------------------------*/
+
+/* -------------------------------------------- Partie offres partenaires -------------------------------------------------- */
+
+.prixPass {
+  color: whitesmoke;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+.prixPass2 {
+  color: whitesmoke;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+
+.parent {
+  padding-bottom: 60px;
+}
+.contact {
+  display: inline-flex;
+}
+.offres {
+  padding-top: 50px;
+}
+/* ------------------------------------------------------- Footer ------------------------------------------------------------------------------*/
+.container {
+  max-width: 1170px;
+  margin: auto;
+  flex: 1 0 auto;
+}
+
+ul {
+  list-style: none;
+  color: #ffffff;
+}
+.footer {
+  padding: 0px 0;
+  font-family: landa;
+}
+.footer-col {
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  width: 80%;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: whitesmoke;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  height: 40px;
+  width: 40px;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+ul {
+  padding-inline-start: 0;
+}
+
+@media screen and (max-width: 690px) {
+  h1.mainTitle {
+    font-size: 35px;
+  }
+}
