@@ -6,22 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cinéMAJE</title>
-    <link rel="stylesheet" href="\filmAffiche\styleMobile.css" />
-    <link rel="stylesheet" href="\filmAffiche\styleDesktop.css" />
+    <link rel="stylesheet" href="../css/styleDesktop.css" />
+    <link rel="stylesheet" href="styleDesktop.css" />
 </head>
 
 <body>
     <header>
-        <a href="#nouveaute"><img id="logo" src="#" alt="logo" /></a>
-        <nav>
-            <ul id="navBarUl">
-                <li id="navBarLi"><a href="#pageAccueil">Films à l'affiche</a></li>
-                <li id="navBarLi"><a href="#tarifs">Tarifs & Abonnements</a></li>
-                <li id="navBarLi"><a href="#infos">Infos pratiques</a></li>
-                <li id="navBarLi"><a href="#contact">Contact</a></li>
-            </ul>
+        <a href="#nouveaute"
+          ><img id="logo" src="images/logo.png" alt="logo"
+        /></a>
+        <nav class="d-none">
+          <ul id="navBarUl">
+            <li id="navBarLi"><a href="#filmAffiche">Films</a></li>
+            <li id="navBarLi"><a href="#tarifs">tarifs & Abonnements</a></li>
+            <li id="navBarLi"><a href="#infos">Infos pratiques</a></li>
+            <li id="navBarLi"><a href="#contact">Contact</a></li>
+          </ul>
         </nav>
-    </header>
+        <svg id="hamburger" viewBox="0 0 130 70" width="40" height="40">
+          <rect width="80" height="10" rx="8"></rect>
+          <rect y="25" width="80" height="10" rx="8"></rect>
+          <rect y="50" width="80" height="10" rx="8"></rect>
+        </svg>
+      </header>
     <div class="wrapper">
         <div class="filters">
           <input type="text" class="search-input" placeholder="🔎 Type to search" />
@@ -246,9 +253,9 @@
     -->
     </main>
     <footer></footer>
-    <script src=".\js\lesFilms.js" type="module"></script>
-    <script src=".\js\getMovieMarkup.js" type="module"></script>
-    <script src=".\js\index.js" type="module"></script>
+    <script src="js/getMovieMarkup.js" type="module"></script>
+    <script src="js/index.js" type="module"></script>
+    <script src="js/lesFilms.js" type="module"></script>
 </body>
 
 
