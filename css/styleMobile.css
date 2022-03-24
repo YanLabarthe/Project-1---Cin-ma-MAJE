@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Landa";
-  src: url(../police/Landa.ttf);
+  src: url(police/Landa.ttf);
 }
 
 body {
@@ -20,19 +20,26 @@ a,
 a :visited {
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 
 button {
   cursor: pointer;
-  font-family: "Landa";
-  font-size: 25px;
-  color: white;
 }
 
 
 #hamburger {
   cursor: pointer;
   fill: burlywood;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  color: burlywood;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 h2 {
@@ -81,7 +88,7 @@ header {
   align-items: center;
   justify-content: space-between;
   border-bottom: solid 1px burlywood;
-  background-color: rgb(24, 26, 26);
+  background-color: rgb(30, 32, 34);
   z-index: 1;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.8);
 }
@@ -363,20 +370,17 @@ strong {
   align-items: center;
 }
 
-#tousLesFilms button {
-  border: none;
-  background-color: rgb(164, 3, 14);
-  width: 100%;
-  height: 40px;
-}
-
 #tousLesFilms a {
   color: white;
   margin: 10px;
   width: 60%;
+  border: none;
+  background-color: rgb(164, 3, 14);
+  height: 40px;
+  text-align: center;
 }
 
-#tousLesFilms button:hover {
+#tousLesFilms a:hover {
   box-shadow: 0 5px 5px 0 grey;
   background-color: rgb(51, 162, 255);
 }
@@ -426,6 +430,9 @@ strong {
 #tousLesAbos {
   width: 80%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
 }
 
 #tousLesAbos p:nth-child(1) {
@@ -434,25 +441,19 @@ strong {
   text-shadow: 1px 1px 1px black;
 }
 
-#tousLesAbos button {
-  border: none;
-  background-color: rgb(164, 3, 14);
-  height: 40px;
-  width: 80%;
-  margin: 10px auto;
-  font-size: 20px;
-}
-
-#tousLesAbos button:hover {
+#tousLesAbos a:hover {
   box-shadow: 0 5px 5px 0 grey;
   background-color: rgb(51, 162, 255);
 }
 
 #tousLesAbos a {
-  color: white;
-  width: 80%;
-  margin: auto;
-}
+    color: white;
+    width: 100%;
+    border: none;
+    background-color: rgb(164, 3, 14);
+    height: 40px;
+    text-align: center;
+  }
 
 /* ---------------------------- Infos pratiques --------------------------- */
 
@@ -528,6 +529,8 @@ strong {
   background-color: rgb(164, 3, 14);
   height: 40px;
   width: 100%;
+  font-family: 'Landa';
+  font-size: 25px;
 }
 
 #contactForm button:hover {
