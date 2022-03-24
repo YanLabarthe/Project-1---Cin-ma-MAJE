@@ -1,12 +1,8 @@
 import { createMovie } from "./getMovieMarkup.js";
 import { movie } from "./lesFilms.js";
 
-console.table(movie[0]);
-console.log(movie[0].img);
-createMovie(movie[0]);
-createMovie(movie[1]);
-createMovie(movie[2]);
-createMovie(movie[3]);
+movie.forEach(movie=>createMovie(movie));
+
 const dropDownButtons = document.getElementsByClassName("dropDownButton");
 const dropDownButtonsArr = Array.prototype.slice.call( dropDownButtons )
 

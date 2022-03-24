@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cinéMAJE</title>
-    <link rel="stylesheet" href="../css/styleDesktop.css" />
-    <link rel="stylesheet" href="styleDesktop.css" />
+    <link rel="stylesheet" href="css/styleMobile.css" />
+    <link rel="stylesheet" href="css/styleMobile2.css" />
+    <link rel="stylesheet" href="css/styleDesktop.css" />
+    <link rel="stylesheet" href="css/styleDesktop2.css" />
 </head>
 
 <body>
@@ -29,6 +31,7 @@
           <rect y="50" width="80" height="10" rx="8"></rect>
         </svg>
       </header>
+      <section id="mainFilmAffiche">
     <div class="wrapper">
         <div class="filters">
           <input type="text" class="search-input" placeholder="🔎 Type to search" />
@@ -251,11 +254,29 @@
             </div>
         </section>
     -->
-    </main>
+</section>    
+</main>
     <footer></footer>
     <script src="js/getMovieMarkup.js" type="module"></script>
     <script src="js/index.js" type="module"></script>
     <script src="js/lesFilms.js" type="module"></script>
+    <script>
+        // --------------------------- Barre de nav -----------------
+
+      document
+        .querySelector("#hamburger")
+        .addEventListener("click", function () {
+          document.querySelector("nav").classList.toggle("d-none");
+          document.querySelector(".menu-backdrop").style.display = "block";
+        });
+
+      document
+        .querySelector(".menu-backdrop")
+        .addEventListener("click", function () {
+          document.querySelector("nav").classList.add("d-none");
+          document.querySelector(".menu-backdrop").style.display = "none";
+        });
+    </script>
 </body>
 
 
