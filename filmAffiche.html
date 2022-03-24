@@ -8,6 +8,7 @@
     <title>cinéMAJE</title>
     <link rel="stylesheet" href="..\css\styleMobile.css" />
     <link rel="stylesheet" href="..\css\styleDesktop.css" />
+    <link rel="stylesheet" href="../css/styleSearch.css">
 </head>
 
 <body>
@@ -24,22 +25,26 @@
     </header>
     <div class="wrapper">
         <div class="filters">
-          <input type="text" class="search-input" placeholder="🔎 Type to search" />
-        <select class="select" name="searchMovie">
-          <option value="1">1/5</option>
-          <option value="2">2/5</option>
-          <option value="3">3/5</option>
-          <option value="4">4/5</option>
-          <option value="5">5/5</option>
-        </select>
-        <div>
-        <label for="available">Show only Available </label>
-        <input type="checkbox" class="available-checkbox" name="checkbox" id="">
+            <div class="search-wrapper">
+                <laber for="search">Search</laber>
+                <input type="search" id="search" class="search-input" placeholder="🔎 Type to search" />
+            </div>
+
+            <select class="select" name="searchMovie">
+                <option value="1">1/5</option>
+                <option value="2">2/5</option>
+                <option value="3">3/5</option>
+                <option value="4">4/5</option>
+                <option value="5">5/5</option>
+            </select>
+            <div>
+                <label for="available">Show only Available </label>
+                <input type="checkbox" class="available-checkbox" name="checkbox" id="">
+            </div>
         </div>
-        </div>
-    <main>
-        <h1>Films à l'affiche</h1>
-        <!-- <hr>
+        <main>
+            <h1>Films à l'affiche</h1>
+            <!-- <hr>
         <section id="film">
             <button class="dropDownButton">
                 <img src="\images\zombeavers.jpg" alt="affiche film1" id="imageAffiche" />
@@ -244,11 +249,11 @@
             </div>
         </section>
     -->
-    </main>
-    <footer></footer>
-    <script src=".\js\lesFilms.js" type="module"></script>
-    <script src=".\js\getMovieMarkup.js" type="module"></script>
-    <script src=".\js\index.js" type="module"></script>
+        </main>
+        <footer></footer>
+        <script src=".\js\lesFilms.js" type="module"></script>
+        <script src=".\js\getMovieMarkup.js" type="module"></script>
+        <script src=".\js\index.js" type="module"></script>
 </body>
 
 

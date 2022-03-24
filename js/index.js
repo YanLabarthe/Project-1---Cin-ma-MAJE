@@ -1,10 +1,24 @@
 import { createMovie } from "./getMovieMarkup.js";
 import { movie } from "./lesFilms.js";
 
-movie.forEach(movie=>createMovie(movie));
+const searchInput = document.querySelector(".search-input");
+
+
+
+movie.forEach(movie => createMovie(movie));
+
+searchInput.addEventListener("input", e => {
+  const value = e.target.value
+  console.log(value);
+  movie.forEach(film => {
+    const isVisible = film.name.includes(value) || film.cat.includes(value) || film.rea.includes(value) || film.act.includes(value);
+    document.querySelector(`#movie-${film.id}`).classList.toggle("hide", !isVisible);
+  })
+}); 
+
 
 const dropDownButtons = document.getElementsByClassName("dropDownButton");
-const dropDownButtonsArr = Array.prototype.slice.call( dropDownButtons )
+const dropDownButtonsArr = Array.prototype.slice.call(dropDownButtons);
 
 dropDownButtonsArr.forEach(dropDownButton => {
   dropDownButton.addEventListener("click", function () {
@@ -12,13 +26,13 @@ dropDownButtonsArr.forEach(dropDownButton => {
   })
 });
 
- /*     
+/*
 Possible style animation du expend and collapse 
 var content = this.nextElementSibling;
 if (content.style.maxHeight){
-  content.style.maxHeight = null;
+ content.style.maxHeight = null;
 } else {
-  content.style.maxHeight = content.scrollHeight + "px";
+ content.style.maxHeight = content.scrollHeight + "px";
 }
 console.log(content)
 }); */
