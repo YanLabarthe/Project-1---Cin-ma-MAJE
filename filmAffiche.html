@@ -12,23 +12,14 @@
 </head>
 
 <body>
-    <header>
-        <a href="#nouveaute"><img id="logo" src="#" alt="logo" /></a>
-        <nav>
-            <ul id="navBarUl">
-                <li id="navBarLi"><a href="#pageAccueil">Films à l'affiche</a></li>
-                <li id="navBarLi"><a href="#tarifs">Tarifs & Abonnements</a></li>
-                <li id="navBarLi"><a href="#infos">Infos pratiques</a></li>
-                <li id="navBarLi"><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
     <div class="wrapper">
         <div class="filters">
             <div class="search-wrapper">
                 <laber for="search">Search</laber>
                 <input type="search" id="search" class="search-input" placeholder="🔎 Type to search" />
             </div>
+
+            <div class="autocomplete-results"></div>
 
             <select class="select" name="searchMovie">
                 <option value="1">1/5</option>
