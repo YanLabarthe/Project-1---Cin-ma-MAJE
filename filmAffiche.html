@@ -14,7 +14,6 @@
 </head>
 
 <body>
-    <header>
         <a href="index.html#nouveaute"
           ><img id="logo" src="images/logo.png" alt="logo"
         /></a>
@@ -32,13 +31,15 @@
           <rect y="50" width="80" height="10" rx="8"></rect>
         </svg>
       </header>
-      <section id="mainFilmAffiche">
+   <section id="mainFilmAffiche">
     <div class="wrapper">
         <div class="filters">
             <div class="search-wrapper">
                 <laber for="search">Search</laber>
                 <input type="search" id="search" class="search-input" placeholder="🔎 Type to search" />
             </div>
+
+            <div class="autocomplete-results"></div>
 
             <select class="select" name="searchMovie">
                 <option value="1">1/5</option>
