@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <header>
         <a href="index.html#nouveaute"
           ><img id="logo" src="images/logo.png" alt="logo"
         /></a>
@@ -35,219 +36,15 @@
     <div class="wrapper">
         <div class="filters">
             <div class="search-wrapper">
-                <laber for="search">Search</laber>
+                <label for="search">Search</label>
                 <input type="search" id="search" class="search-input" placeholder="🔎 Type to search" />
             </div>
             <div class="autocomplete-results"></div>
         </div>
+    </div>
         <main>
             <h1>Films à l'affiche</h1>
-            <!-- <hr>
-        <section id="film">
-            <button class="dropDownButton">
-                <img src="\images\zombeavers.jpg" alt="affiche film1" id="imageAffiche" />
-            </button>
-            <div id="filmDescription">
-                <h2 class="movieTitle">Zombeavers</h2>
-                <div class="dropDownContent">
-                    <div id="mainInfoWrap">
-                        <div id="infoPartOne">
-                            <p id="infoType">Note <span id="text"> 4 sharknados out of 5 </span></p>
-                            <p id="infoType"><span id="text">Avertissement (-12) Interdit aux moins de 12 ans.</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div id="infoPartTwo">
-                        <button id="theaterInfoButton">
-                            <div id="theaterInfoWrap">
-                                <div id="seanceHeureDebut">19:15</div>
-                                <div id="seanceHeureFin">(fin: 21h30)</div>
-                                <div id="seanceLangue">VO</div>
-                            </div>
-                        </button>
-                        <button id="theaterInfoButton">
-                            <div id="theaterInfoWrap">
-                                <div id="seanceHeureDebut">19:15</div>
-                                <div id="seanceHeureFin">(fin: 21h30)</div>
-                                <div id="seanceLangue">VO</div>
-                            </div>
-                        </button>
-                    </div>
-                    <div id="infoPartThree"></div>
-                    <div id="movieInfoWrap">
-                        <p id="infoType">Date de sortie <span id="text">Septembre 2014</span></p>
-                        <p id="infoType">Catégorie <span id="text">Horreur</span></p>
-                        <p id="infoType">Réalisateur <span id="text">Lou Adler, Michael White</span></p>
-                        <p id="infoType">Acteurs principaux <span id="text">Chad Anderson, Lexi Atkins, Brent
-                                Briscoe</span>
-                        </p>
-                        <p id="infoType">Synopsis:</p>
-                        <p><span id="text" id="textSynopsis">Trois copines partent pour un week-end de fun dans un
-                                cabanon au bord d'un lac. C'est le parfait Sea, Sex and Sun jusqu'à l'attaque d'une
-                                horde de... castors zombies !
-
-                            </span></p>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
-        <hr>
-        <section id="film">
-            <button class="dropDownButton">
-                <img src="\images\kungPow.webp" alt="affiche film1" id="imageAffiche" />
-            </button>
-            <div id="filmDescription">
-                <h2 class="movieTitle">Kung Pow</h2>
-                <div class="dropDownContent">
-                    <div id="mainInfoWrap">
-                        <div id="infoPartOne">
-                            <p id="infoType">Note <span id="text"> 5 sharknados out of 5 </span></p>
-                            <p id="infoType"><span id="text">Avertissement: (-12) Interdit aux moins de 12 ans.</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div id="infoPartTwo">
-                        <button id="theaterInfoButton">
-                            <div id="theaterInfoWrap">
-                                <div id="seanceHeureDebut">19:15</div>
-                                <div id="seanceHeureFin">(fin: 21h30)</div>
-                                <div id="seanceLangue">VO</div>
-                            </div>
-                        </button>
-                        <button id="theaterInfoButton">
-                            <div id="theaterInfoWrap">
-                                <div id="seanceHeureDebut">19:15</div>
-                                <div id="seanceHeureFin">(fin: 21h30)</div>
-                                <div id="seanceLangue">VO</div>
-                            </div>
-                        </button>
-                    </div>
-                    <div id="infoPartThree"></div>
-                    <div id="movieInfoWrap">
-                        <p id="infoType">Date de sortie <span id="text">Juillet 2002</span></p>
-                        <p id="infoType">Catégorie <span id="text">Comédie , Arts Martiaux</span></p>
-                        <p id="infoType">Réalisateur <span id="text">Steve Oedekerk</span></p>
-                        <p id="infoType">Acteurs principaux <span id="text">Steve Oedekerk , Fei Lung , Leo Lee</span>
-                        </p>
-                        <p id="infoType">Synopsis</p>
-                        <p><span id="text" id="textSynopsis">La légende dit que Bruce Lee a débuté son entraînement à
-                                l'âge de six ans. L'élu est réputé avoir commencé à l'entraîner alors qu'il n'était
-                                encore qu'un foetus. Quand le légendaire Master Pain, malveillant maître Kung-fu,
-                                massacre sa famille, l'élu entreprend une quête pour venger la mort des siens...
-                            </span></p>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
-        <hr>
-        <section id="film">
-            <button class="dropDownButton">
-                <img src="\images\rienQuePourVosCheveux.jpg" alt="affiche film1" id="imageAffiche" />
-            </button>
-            <div id="filmDescription">
-                <h2 class="movieTitle">Rien que pour vos cheveux</h2>
-                <div class="dropDownContent">
-                    <div id="mainInfoWrap">
-                        <div id="infoPartOne">
-                            <p id="infoType">Note <span id="text"> 4.5 sharknados out of 5 </span></p>
-                            <p id="infoType"><span id="text">Tout public.</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div id="infoPartTwo">
-                        <button id="theaterInfoButton">
-                            <div id="theaterInfoWrap">
-                                <div id="seanceHeureDebut">19:15</div>
-                                <div id="seanceHeureFin">(fin: 21h30)</div>
-                                <div id="seanceLangue">VO</div>
-                            </div>
-                        </button>
-                        <button id="theaterInfoButton">
-                            <div id="theaterInfoWrap">
-                                <div id="seanceHeureDebut">19:15</div>
-                                <div id="seanceHeureFin">(fin: 21h30)</div>
-                                <div id="seanceLangue">VO</div>
-                            </div>
-                        </button>
-                    </div>
-                    <div id="infoPartThree"></div>
-                    <div id="movieInfoWrap">
-                        <p id="infoType">Date de sortie <span id="text">août 2008</span></p>
-                        <p id="infoType">Catégorie <span id="text">Comédie, Action</span></p>
-                        <p id="infoType">Réalisateur <span id="text">Dennis Dugan</span></p>
-                        <p id="infoType">Acteurs principaux <span id="text">Adam Sandler , John Turturro , Emmanuelle
-                                Chriqui</span>
-                        </p>
-                        <p id="infoType">Synopsis</p>
-                        <p id="textSynopsis">Agent d'élite du Mossad et véritable star dans son pays,
-                                Zohan a un secret : il rêve de devenir coiffeur en Amérique. Profitant d'un combat
-                                contre son pire ennemi, un terroriste connu sous le nom de Fantôme, Zohan se fait passer
-                                pour mort et s'envole pour New York armé uniquement de ses ciseaux et de son
-                                sèche-cheveux.
-                                Malgré son inexpérience, il est engagé par la patronne d'un salon de coiffure, une jeune
-                                et jolie Palestinienne. Très vite, Zohan va se faire un nom dans la coiffure et attirer
-                                dans le modeste salon une clientèle toujours plus nombreuse.
-                                Alors que son passé d'agent semble loin derrière lui, Zohan est repéré par le Fantôme,
-                                qui compte bien en finir avec lui une bonne fois pour toutes...</p>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
-        <hr>
-        <section id="film">
-            <button class="dropDownButton">
-                <img src="\images\carnosaur.webp" alt="affiche film1" id="imageAffiche" />
-            </button>
-            <div id="filmDescription">
-                <h2 class="movieTitle">Carnosaur</h2>
-                <div class="dropDownContent">
-                    <div id="mainInfoWrap">
-                        <div id="infoPartOne">
-                            <p id="infoType">Note <span id="text"> 4.5 sharknados out of 5 </span></p>
-                            <p id="infoType"><span id="text">Avertissement: (-12) Interdit aux moins de 12 ans.</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div id="infoPartTwo">
-                        <button id="theaterInfoButton">
-                            <div id="theaterInfoWrap">
-                                <div id="seanceHeureDebut">19:15</div>
-                                <div id="seanceHeureFin">(fin: 21h30)</div>
-                                <div id="seanceLangue">VO</div>
-                            </div>
-                        </button>
-                        <button id="theaterInfoButton">
-                            <div id="theaterInfoWrap">
-                                <div id="seanceHeureDebut">19:15</div>
-                                <div id="seanceHeureFin">(fin: 21h30)</div>
-                                <div id="seanceLangue">VO</div>
-                            </div>
-                        </button>
-                    </div>
-                    <div id="infoPartThree"></div>
-                    <div id="movieInfoWrap">
-                        <p id="infoType">Date de sortie <span id="text">1993</span></p>
-                        <p id="infoType">Catégorie <span id="text">Horreur</span></p>
-                        <p id="infoType">Réalisateur <span id="text">Adam Simon</span></p>
-                        <p id="infoType">Acteurs principaux <span id="text">Diane Ladd, Raphael Sbarge, Jennifer
-                                Runyon</span>
-                        </p>
-                        <p id="infoType">Synopsis</p>
-                        <p><span id="text" id="textSynopsis">Un dinosaure génétiquement modifié et affamé s'échappe
-                                d'une société de bio-ingénierie et fait des ravages dans la ville à proximité.
-
-                            </span></p>
-                        <hr>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
-    -->
-
+           
 </section>    
 </main>
     <footer></footer>

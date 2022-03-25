@@ -11,6 +11,12 @@
     width: 100%;
   }
 
+  .wrapper{
+    display: flex;
+    justify-content: center;
+    align-content: center ;
+  }
+
   #film {
     display: flex;
     align-content: flex-start;
@@ -41,5 +47,10 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .movie-container {
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }

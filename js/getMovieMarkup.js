@@ -5,7 +5,7 @@
 
 // export const createMovie = (image, titre, note, avertissement, butstart, butend, butvo, date, cat2, realisateur, acteur, synopsis) => {
     export const getMovieMarkup = (movie) => `
-    <section id="movie-${movie.id}">
+    <section class="movie-container" id="movie-${movie.id}">
     <hr>
      <button class="dropDownButton">
          <img src="${movie.img}" alt="affiche film1" id="imageAffiche" />
