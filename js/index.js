@@ -4,16 +4,15 @@ import { movie as movies } from "./lesFilms.js";
 const searchInput = document.querySelector(".search-input");
 const autocompleteResults = document.querySelector(".autocomplete-results");
 
-
-
-// Vide la liste de l'auto complétion ================================
+//================== Vide la liste de l'auto complétion ====================
 
 const closeAutoComplete = () => {
   autocompleteResults.innerHTML = "";
 };
-// ===================================================================
 
-// 
+
+
+//==================searchs the input=======================================
 searchInput.addEventListener("input", (e) => {
   const value = e.target.value;
   movies.forEach((film) => {
@@ -28,6 +27,9 @@ searchInput.addEventListener("input", (e) => {
   });
 });
 
+
+
+// =========================Auto-Complete=====================================
 searchInput.addEventListener("input", (e) => {
   const value = e.target.value;
 
@@ -48,29 +50,26 @@ searchInput.addEventListener("input", (e) => {
         <strong> ${movie.name.substr(0, value.length)} </strong>
         ${movie.name.substr(value.length)}
       `;
-      
 
       autocompleteResults.appendChild(b);
 
       b.addEventListener("click", (e) => {
-        searchInput.value = movie.name;
+        window.location.hash = `#movie-${movie.id}`;
         closeAutoComplete();
       });
-      
-      
     }
   });
 });
 
-/**
- * Crée l'html des films******************************************
- */
 
- movies.forEach((movie) => createMovie(movie));
 
-//***************************************************************** */
+//=========================Créé l'HTML========================================
 
-//=========Le dropDown de la version mobile ==================================================================
+movies.forEach((movie) => createMovie(movie));
+
+
+
+//=========Le dropDown de la version mobile ==================================
 const dropDownButtons = document.getElementsByClassName("dropDownButton");
 const dropDownButtonsArr = Array.prototype.slice.call(dropDownButtons);
 
@@ -81,4 +80,4 @@ dropDownButtonsArr.forEach((dropDownButton) => {
       .classList.toggle("visible");
   });
 });
-// ===========================================================================================================
+
