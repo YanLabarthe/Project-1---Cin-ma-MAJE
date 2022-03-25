@@ -6,12 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cinéMAJE</title>
-    <link rel="stylesheet" href="..\css\styleMobile.css" />
-    <link rel="stylesheet" href="..\css\styleDesktop.css" />
-    <link rel="stylesheet" href="../css/styleSearch.css">
+
+    <link rel="stylesheet" href="css/styleMobile.css" />
+    <link rel="stylesheet" href="css/styleMobile2.css" />
+    <link rel="stylesheet" href="css/styleDesktop.css" />
+    <link rel="stylesheet" href="css/styleDesktop2.css" />
 </head>
 
 <body>
+        <a href="index.html#nouveaute"
+          ><img id="logo" src="images/logo.png" alt="logo"
+        /></a>
+        <nav class="d-none">
+          <ul id="navBarUl">
+            <li id="navBarLi"><a href="#filmAffiche">Films</a></li>
+            <li id="navBarLi"><a href="index.html#tarifs">tarifs & Abonnements</a></li>
+            <li id="navBarLi"><a href="index.html#infos">Infos pratiques</a></li>
+            <li id="navBarLi"><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <svg id="hamburger" viewBox="0 0 130 70" width="40" height="40">
+          <rect width="80" height="10" rx="8"></rect>
+          <rect y="25" width="80" height="10" rx="8"></rect>
+          <rect y="50" width="80" height="10" rx="8"></rect>
+        </svg>
+      </header>
+   <section id="mainFilmAffiche">
     <div class="wrapper">
         <div class="filters">
             <div class="search-wrapper">
@@ -240,11 +260,30 @@
             </div>
         </section>
     -->
-        </main>
-        <footer></footer>
-        <script src=".\js\lesFilms.js" type="module"></script>
-        <script src=".\js\getMovieMarkup.js" type="module"></script>
-        <script src=".\js\index.js" type="module"></script>
+
+</section>    
+</main>
+    <footer></footer>
+    <script src="js/getMovieMarkup.js" type="module"></script>
+    <script src="js/index.js" type="module"></script>
+    <script src="js/lesFilms.js" type="module"></script>
+    <script>
+        // --------------------------- Barre de nav -----------------
+
+      document
+        .querySelector("#hamburger")
+        .addEventListener("click", function () {
+          document.querySelector("nav").classList.toggle("d-none");
+          document.querySelector(".menu-backdrop").style.display = "block";
+        });
+
+      document
+        .querySelector(".menu-backdrop")
+        .addEventListener("click", function () {
+          document.querySelector("nav").classList.add("d-none");
+          document.querySelector(".menu-backdrop").style.display = "none";
+        });
+    </script>
 </body>
 
 

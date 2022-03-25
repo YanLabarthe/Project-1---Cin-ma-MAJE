@@ -1,47 +1,45 @@
-
-@media screen and (min-width: 360px){
-
-body{
+@media screen and (min-width: 360px) {
+  #mainFilmAffiche {
+    margin-top: 80px;
     padding-left: 1%;
     padding-right: 1%;
     background-color: #131516;
-    color: #C4D0D7;
-}
+    color: #c4d0d7;
+  }
 
-img{
+  #mainFilmAffiche img {
     width: 100%;
-}
+  }
 
-#film{
-    display:flex;
+  #film {
+    display: flex;
     align-content: flex-start;
     justify-content: auto center;
     flex-wrap: wrap;
-    padding-left: 10%;
-    padding-right: 10%;
-}
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 
-#filmDescription{
+  #filmDescription {
     padding-left: 2%;
     padding-right: 2%;
     max-width: 75%;
-}
+  }
 
-.dropDownButton{
+  .dropDownButton {
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     min-width: 20%;
     max-width: 20%;
     border: none;
     background-color: inherit;
-}
+  }
 
-.dropDownContent{
+  .dropDownContent {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-}
-
+  }
 }

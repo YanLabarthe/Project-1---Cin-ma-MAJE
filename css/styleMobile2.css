@@ -1,5 +1,5 @@
 @media screen and (max-width: 360px){
-    body{
+    #mainFilmAffiche{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -9,7 +9,7 @@
         color: #C4D0D7;
     }
 
-    img{
+    #mainFilmAffiche img{
         width: 100%;
     }
 

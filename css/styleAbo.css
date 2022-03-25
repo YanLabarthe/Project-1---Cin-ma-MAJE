@@ -1,19 +1,6 @@
-/* --------------------------------------------------Police -----------------------------------------------------------------------------*/
-@font-face {
-  font-family: "Landa";
-  src: url("Landa.ttf");
-}
-
-body {
-  font-family: landa;
-  background-color: rgb(30, 33, 34);
-}
 /* ------------------------------------------------- Cartes & Abonnements --------------------------------------------------------------*/
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+#abo {
+  padding-top: 81px;
 }
 
 .parent {
@@ -31,56 +18,54 @@ div.footer-col {
   flex-basis: 400px;
 }
 
-h1 {
-  font-family: landa;
+#abo h1 {
   text-align: center;
   font-size: 50px;
   color: burlywood;
   letter-spacing: 5px;
 }
 
-h1.mainTitle {
-  font-family: landa;
+#abo h1.mainTitle {
   text-align: center;
   font-size: 70px;
   color: burlywood;
   letter-spacing: 8px;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
-h2 {
+#abo h2 {
   color: whitesmoke;
-  text-decoration: underline burlywood;
   font-weight: normal;
   font-size: 35px;
 }
-h2.duo {
+#abo h2.duo {
   color: whitesmoke;
 }
 
-h3 {
+#abo h3 {
   font-size: 30px;
   color: whitesmoke;
   letter-spacing: 1.5px;
 }
-h4 {
+#abo h4 {
   font-size: 24px;
   color: whitesmoke;
 }
-p {
+#abo p {
   color: whitesmoke;
 }
-img.carteAbo {
+#abo img.carteAbo {
   width: 300px;
   height: auto;
   border-radius: 10%;
   transition: transform 0.1s;
 }
-img.carteAbo:hover {
+#abo img.carteAbo:hover {
   transform: scale(1.2);
 }
 
-p.prix {
+#abo p.prix {
   font-size: 25px;
   font-weight: bold;
   color: burlywood;
@@ -96,6 +81,7 @@ tbody {
   font-size: 24px;
   letter-spacing: 1.5px;
 }
+
 td {
   color: #ffffff;
 }
@@ -103,7 +89,9 @@ td {
 td,
 th {
   color: #ffffff;
+  font-weight: normal;
   text-align: center;
+  border: 1px solid burlywood;
 }
 
 .condition {
@@ -112,12 +100,13 @@ th {
   padding-top: 50px;
   color: #ffffff;
 }
+
 .condition2 {
   font-style: italic;
   font-size: 18px;
-  padding-top: 50px;
-  padding-left: 345px;
+  padding-top: 5px;
   color: #ffffff;
+  margin: 0;
 }
 .prix {
   font-weight: bold;
@@ -132,7 +121,7 @@ th {
 
 /* ------------------------------------code bouton je m'abonne ------------------------ */
 
-.myButton {
+.myButton2 {
   background-color: rgb(51, 162, 255);
   border-radius: 28px;
   border: 1px solid rgb(51, 162, 255);
@@ -146,10 +135,10 @@ th {
   text-shadow: 0px 0px 0px #2f6627;
   margin-bottom: 15px;
 }
-.myButton:hover {
+.myButton2:hover {
   background-color: #14a961;
 }
-.myButton:active {
+.myButton2:active {
   position: relative;
   top: 1px;
 }
@@ -157,6 +146,9 @@ th {
 /* ---------------------------------------------------------- Tarifs -------------------------------------------------------------------------*/
 
 /* -------------------------------------------- Partie offres partenaires -------------------------------------------------- */
+.partenaires h3 {
+  padding-bottom: 5px;
+}
 
 .prixPass {
   color: whitesmoke;
@@ -185,34 +177,29 @@ th {
   flex: 1 0 auto;
 }
 
-ul {
+footer ul {
   list-style: none;
   color: #ffffff;
+  padding-inline-start: 0;
+  display: flex;
 }
-.footer {
-  padding: 0px 0;
-  font-family: landa;
+.footer,
+.parent {
+  padding: 0;
 }
 .footer-col {
   padding: 0 15px;
 }
 .footer-col h4 {
-  font-size: 18px;
+  font-size: 35px;
   color: #ffffff;
-  text-transform: capitalize;
   margin-bottom: 35px;
   font-weight: 500;
   position: relative;
+  text-decoration: underline 6px solid burlywood;
+  border-bottom: 1px solid burlywood;
 }
-.footer-col h4::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  background-color: #e91e63;
-  height: 2px;
-  width: 80%;
-}
+
 .footer-col ul li:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -240,12 +227,21 @@ ul {
   color: #ffffff;
   transition: all 0.5s ease;
 }
-ul {
-  padding-inline-start: 0;
+#footerInfo {
+  flex-direction: column;
+}
+
+#footerReseaux {
+  align-items: center;
+  justify-content: center;
+}
+
+#footerReseaux li {
+  padding: 15px;
 }
 
 @media screen and (max-width: 690px) {
-  h1.mainTitle {
+  #abo h1.mainTitle {
     font-size: 35px;
   }
 }

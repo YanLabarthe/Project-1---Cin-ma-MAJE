@@ -4,138 +4,208 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-     
- 
- <!--------------------------------------------------------------Cartes Abonnements ------------------------------------------------------------------------->
- 
-    <title>Cartes & Abonnements</title>
+    <link rel="stylesheet" href="./css/styleMobile.css" />
+    <link rel="stylesheet" href="./css/styleDesktop.css" />
+    <link rel="stylesheet" href="./css/styleAbo.css" />
   </head>
+  <!--------------------------------------------------------------Cartes Abonnements ------------------------------------------------------------------------->
   <body>
+    <header>
+      <a href="index.html#nouveaute"
+        ><img id="logo" src="images/logo.png" alt="logo"
+      /></a>
+      <nav class="d-none">
+        <ul id="navBarUl">
+          <li id="navBarLi"><a href="index.html#filmsAffiche">Films</a></li>
+          <li id="navBarLi"><a href="#tarifs">tarifs & Abonnements</a></li>
+          <li id="navBarLi"><a href="index.html#infos">Infos pratiques</a></li>
+          <li id="navBarLi"><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <svg id="hamburger" viewBox="0 0 130 70" width="40" height="40">
+        <rect width="80" height="10" rx="8"></rect>
+        <rect y="25" width="80" height="10" rx="8"></rect>
+        <rect y="50" width="80" height="10" rx="8"></rect>
+      </svg>
+    </header>
+    <section id="abo">
+    <h1 class="mainTitle">Cartes d'abonnement - CinéMAJE</h1>
+    <div class="parent">
+      <div class="div-student">
+        <h2>Carte étudiant</h2>
+        <img
+          class="carteAbo"
+          src="/images/carteEtudiant.png"
+          alt="imageciné"
+          ;
+        />
+        <p class="prix">20,20€ / Mois</p>
+        <a href="#" class="myButton">je m'abonne</a>
+        <div class="condition">
+          12 mois d'engagement minimum, sous présentation d'une carte étudiante
+          valable et d'une pièce d'identité.
+        </div>
+      </div>
+      <div class="div-normal">
+        <h2>Carte standard</h2>
+
+        <img class="carteAbo" src="/images/carteStandard.png" alt="imageciné" />
+        <p class="prix">28,9€ / Mois</p>
+        <a href="#" class="myButton">je m'abonne</a>
+        <div class="condition">
+          12 mois d'engagement minimum Pour une personne
+        </div>
+      </div>
+      <div class="div-duo">
+        <h2 class="duo">Carte duo</h2>
+        <img class="carteAbo" src="/images/carteDuo.png" alt="imageciné" />
+
+        <p class="prix">40,20€ / Mois</p>
+        <a href="#" class="myButton">je m'abonne</a>
+        <div class="condition">
+          12 mois d'engagement minimum Pour une personne et un accompagnement au
+          choix.
+        </div>
+      </div>
+    </div>
+    <!--------------------------------------------------------------Table ------------------------------------------------------------------------->
+    <div class="table">
+      <h1 class="cine">Tarifs - CinéMAJE</h1>
+      <table>
+        <tr>
+          <th>Normal*</th>
+          <th>Réduit**</th>
+          <th>Enfants***</th>
+          <th>Etudiants****</th>
+        </tr>
+        <tr>
+          <div class="prix">
+            <td><p>10,20€</p>
+            <p class="condition2">*les handicapés ne sont pas acceptés.</p>
+            </td>
+            <td><p>7,90€</p>
+            <p class="condition2">**les vieux et les chômeurs.</p>
+            </td>
+            <td><p>,50€</p>
+            <p class="condition2">***de moins de 5 ans.</p>
+            </td>
+            <td><p>60,90€</p>
+              <p class="condition2">****allez plutôt en cours fainéants.</p>
+            </td>
+          </div>
+        </tr>
+      </table>
+      <br />
+    </div>
+    <!--------------------------------------------------------------Offres Partenaire ------------------------------------------------------------------------->
+
+    <div class="partenaires">
+      <h1 class="offres">Offres partenaire</h1>
+      <div class="parent">
+        <div>
+          <h3>Abonnés TBM :</h3>
+          <img
+            src="images/tbm2.png"
+            alt="TBM"
+            width="150px"
+            height="150"
+            class="imgPass2"
+          />
+          <div class="prixPass">6,90€</div>
+        </div>
+        <div>
+          <h3>Carte Jeunes :</h3>
+          <img
+            src="images/carte jeune2.png "
+            alt="carteJeune"
+            width="150px"
+            height="150"
+            class="imgPass"
+          />
+          <div class="prixPass2">6,90€</div>
+        </div>
+        <div>
+          <h3>Pass séniors :</h3>
+          <img
+            src="images/Pass séniors.png"
+            alt="passSeniors"
+            width="150px"
+            height="150"
+            class="imgPass"
+          />
+          <div class="prixPass2">6,90€</div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!--   ----------------------------------------------------- Footer -----------------------------------------------------------------------------                                                                                                                                    -->
+    <footer class="footer">
+      <div class="parent">
+        <div class="footer-col">
+          <h4>Informations complémentaires</h4>
+          <ul id="footerInfo">
+            <li style="border-bottom: 1px solid; padding-bottom: 5px;">cinemaje.contact@gmail.com</li>
+            <li style="border-bottom: 1px solid; border-top: 1px solid; padding: 5px 0;">"05 56 00 00 30"</li>
+            <li><p style="margin: 0; border-top: 1px solid; padding-top: 5px;">17 rue de la foire à la saucisse</p> <p style="margin: 0;">33000 Bordeaux</p></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>réseaux sociaux</h4>
+          <ul id="footerReseaux">
+            <li class="imgfooter">
+              <img
+                src="/images/inconfb.png"
+                alt="logoFb"
+                width="40px"
+                height="40px"
+              />
+            </li>
+            <li class="imgfooter">
+              <img
+                src="/images/inconinsta.png"
+                alt="logoFb"
+                width="40px"
+                height="40px"
+              />
+            </li>
+            <li class="imgfooter">
+              <img
+                src="/images/incontwitter.png"
+                alt="logoFb"
+                width="40px"
+                height="40px"
+              />
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="footer-col">
+          <h4>Horaires</h4>
+          <ul>
+            <li>Lundi 10h-23h</li>
+            <li>Mardi 10h-23h</li>
+            <li>Mercredi 10h-23h</li>
+            <li>Jeudi 10h-23h</li>
+            <li>Vendredi 10h-23h</li>
+            <li>Samedi 10h-01h</li>
+            <li>Dimanche 10h-01h</li>
+          </ul>
+        </div> -->
+      </div>
+    </footer>
+    <script>
+      document
+        .querySelector("#hamburger")
+        .addEventListener("click", function () {
+          document.querySelector("nav").classList.toggle("d-none");
+          document.querySelector(".menu-backdrop").style.display = "block";
+        });
+
+      document
+        .querySelector(".menu-backdrop")
+        .addEventListener("click", function () {
+          document.querySelector("nav").classList.add("d-none");
+          document.querySelector(".menu-backdrop").style.display = "none";
+        });
+    </script>
+  </body>
 </html>
-<div class="Intro" >
-<h1 class="mainTitle">Cartes d'abonnement - CinéMAJ</h1>
-<div class="parent">
-  <div class="div-student">
-    <h2>Carte étudiant</h2>
-    <img class="carteAbo" src="/images/carteEtudiant.png" alt="imageciné" ;/>
-    <p class="prix">20,20€ / Mois</p>
-    <a href="#" class="myButton">je m'abonne</a>
-    <div class="condition">
-      12 mois d'engagement minimum, sous présentation d'une carte étudiante
-      valable et d'une pièce d'identité.
-    </div>
-  </div>
-  <div class="div-normal">
-    <h2>Carte standard</h2>
-
-    <img class="carteAbo" src="/images/carteStandard.png" alt="imageciné"  />
-    <p class="prix">28,9€ / Mois</p>
-    <a href="#" class="myButton">je m'abonne</a>
-    <div class="condition">12 mois d'engagement minimum Pour une personne</div>
-  </div>
-  <div class="div-duo">
-    <h2 class="duo">Carte duo</h2>
-    <img class="carteAbo" src="/images/carteDuo.png" alt="imageciné"  />
-    
-    <p class="prix">40,20€ / Mois</p>
-    <a href="#" class="myButton">je m'abonne</a>
-    <div class="condition">
-      12 mois d'engagement minimum Pour une personne et un accompagnement au
-      choix.
-    </div>
-  </div>
-</div>
-<!--------------------------------------------------------------Table ------------------------------------------------------------------------->
-<div class="table">
-  <h1 class="cine">Tarifs - CinéMAJ</h1>
-  <div id="tarifs"></div>
-  <table>
-    <tr>
-      <th>Normal</th> 
-      <th>Réduit*</th>
-      <th>Enfants**</th>
-      <th>Etudiants</th>
-    </tr>
-  <tr>
-  <div class="prix">
-    <td>10,20€</td>
-    <td> 7,90€ </td>
-    <td> 5,50€</td>
-    <td> 6,90€</td>
-  </div>
- </tr>
-</table>
-<br>  
-
-  <div class="condition2">
-    *Demandeur d'emploi, +65 ans.  &emsp;                                 
-     **de moins de 16 ans.
-  </div>
-</div>
-<!--------------------------------------------------------------Offres Partenaire ------------------------------------------------------------------------->
-
- 
-<div class="partenaires">
-  <h1 class="offres">Offres partenaire</h1>
-  <div class="parent">
-    <div>
-      <h3>Abonnés TBM :</h3>
-      <img src="/images/tbm2.png" alt="TBM" width="150px" height="150" class="imgPass2" />
-      <div class="prixPass">
-        6,90€
-      </div>
-    </div>
-    <div>
-      <h3>Carte Jeunes :</h3>
-      <img src="/images/carte jeune2.png " alt="carteJeune" width="150px" height="150" class="imgPass" />
-      <div class="prixPass2">
-        6,90€
-      </div>
-    </div>
-    <div>
-      <h3>Pass séniors  :</h3>
-      <img src="/images/Pass séniors.png" alt="passSeniors" width="150px" height="150" class="imgPass" />
-      <div class="prixPass2">
-          6,90€
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--   ----------------------------------------------------- Footer -----------------------------------------------------------------------------                                                                                                                                    -->
-<footer class="footer">
-  <div class="parent">
-    <div class="footer-col">
-      <h4> Informations complémentaires </h4>
-      <ul> 
-          <li>cinemaje.contact@gmail.com</li>
-          <li>"05 56 00 00 30"</li>
-          <li>7 rue de la foire à la saucisse 33000 Bordeaux</li>
-      </ul>         
-    </div>
-    <div class="footer-col">
-      <h4> réseaux sociaux </h4>
-      <ul> 
-        <li class="imgfooter"><img src="/images/inconfb.png" alt="logoFb" width="40px" height="40px">Facebook Cinemaj</li>
-        <li class="imgfooter"><img src="/images/inconinsta.png" alt="logoFb" width="40px" height="40px">Instagram Cinemaj</li>
-        <li class="imgfooter"><img src="/images/incontwitter.png" alt="logoFb" width="40px" height="40px">Twitter Cinemaj</li>        
-      </ul>         
-    </div>
-    <div class="footer-col">
-      <h4> Horaires</h4>
-      <ul>
-        <li>Lundi 10h-23h</li>
-        <li>Mardi 10h-23h</li>
-        <li>Mercredi 10h-23h</li>
-        <li>Jeudi  10h-23h</li>
-        <li>Vendredi 10h-23h</li>
-        <li>Samedi 10h-01h</li>
-        <li>Dimanche 10h-01h</li> 
-      </ul>      
-    </div>
-  </div>
-</footer>
-<script src="index.js"></script>
-  
-</body> 
